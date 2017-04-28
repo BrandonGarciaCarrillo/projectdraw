@@ -1,52 +1,72 @@
+color red= color (255,0,0);
+color green= color(0,255,0);
+color blue= color (0,0,255);
+color ip= color (50,25,50);
 void setup() {
   //set the size of the screen
   size(1080,800);
-  background(100,100,100);
+  background(255);
   
 }
 
 void draw() {
-  //draw line based on mouse location
-  if (mousePressed == true) {
-  stroke(255);
-line(pmouseX,pmouseY,mouseX,mouseY);
+  //ERASE
+  if (mousePressed && (mouseButton == RIGHT)) {
+    stroke(255);
+  strokeWeight(20);
+      line(pmouseX,pmouseY,mouseX,mouseY);
   } else {
     stroke(0);
-  }
-  
-  
-
-
-    // B makes pen black
-
- if (mousePressed == true) {
+     }
+    // RED
+ if (mousePressed && (mouseButton == LEFT)) {
     if (key == 'b' || key == 'B') {
-
-      stroke(1);
-      strokeWeight(2);
-      line(pmouseX,pmouseY,mouseX,mouseY);
- } else {
-    stroke(0);
-     }
-}
-
-if (mousePressed && (mouseButton == RIGHT)) {
-    background(100, 100, 100);
-  }
-   if (mousePressed == true) {
-    if (key == 'l' || key == 'L') {
-      fill(153);
-      stroke(204, 102, 0);
-      rect(30, 20, 55, 55);
       
+      stroke(red);
       strokeWeight(2);
       line(pmouseX,pmouseY,mouseX,mouseY);
  } else {
     stroke(0);
+    strokeWeight(2);
      }
-  
-  
-  }
-
-
 }
+  //BLACK
+   if (mousePressed && (mouseButton == LEFT)) {
+    if (key == 'l' || key == 'L') {
+      
+      stroke(1);
+      line(pmouseX,pmouseY,mouseX,mouseY);
+ } else {
+    stroke(0);
+     }
+     //GREEN
+   if (mousePressed && (mouseButton == LEFT)) {
+    if (key == 'r' || key == 'R') {
+      fill(0);
+      stroke(green);
+      line(pmouseX,pmouseY,mouseX,mouseY);
+ } else {
+    stroke(0);
+     }
+ 
+ 
+ if (mousePressed && (mouseButton == LEFT)) {
+    if (key == 'v' || key == 'V') {
+      
+      stroke(blue);
+      line(pmouseX,pmouseY,mouseX,mouseY);
+ } else {
+    stroke(0);
+     }
+ 
+ if (mousePressed && (mouseButton == LEFT)) {
+    if (key == 'p' || key == 'P') {
+      
+      stroke(ip);
+      line(pmouseX,pmouseY,mouseX,mouseY);
+ } else {
+    stroke(0);
+     }
+ 
+ 
+   }}}}}
